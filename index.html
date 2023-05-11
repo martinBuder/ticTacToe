@@ -5,10 +5,25 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tic Tac Toe</title>
-	<script src="script.js"></script>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<h1>Tic Tac Toe</h1>
 	
+	<div id="content" class="fieldWrapper">
+		<div id="1" class="game-field" onclick="handleClick(1)"></div>
+		<div id="2" class="game-field" onclick="handleClick(2)"></div>
+		<div id="3" class="game-field" onclick="handleClick(3)"></div>
+		<div id="4" class="game-field" onclick="handleClick(4)"></div>
+		<div id="5" class="game-field" onclick="handleClick(5)"></div>
+		<div id="6" class="game-field" onclick="handleClick(6)"></div>
+		<div id="7" class="game-field" onclick="handleClick(7)"></div>
+		<div id="8" class="game-field" onclick="handleClick(8)"></div>
+		<div id="9" class="game-field" onclick="handleClick(9)"></div>
+	</div>
+
+	<button class="reloadBtn" onclick="reloadGame()">Reload</button>
+
+	<script src="script.js"></script>
 </body>
 </html>
