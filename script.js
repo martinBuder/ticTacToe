@@ -47,8 +47,9 @@ const winning = [
 			const fields = document.querySelectorAll('.game-field');
 			fields.forEach(field => {
 					field.innerHTML = '';
-					field.classList.remove('clicked');
+					field.classList.remove('clicked', 'winning-field');
 			});
+			document.getElementById('winner').innerHTML=''
 	}
 
 
@@ -59,6 +60,9 @@ function checkForWinner() {
 		const fieldB = document.getElementById(`${b}`);
 		const fieldC = document.getElementById(`${c}`);
 		if (fieldA.innerHTML !== '' && fieldA.innerHTML === fieldB.innerHTML && fieldB.innerHTML === fieldC.innerHTML) {
+						fieldA.classList.add('winning-field');
+      fieldB.classList.add('winning-field');
+      fieldC.classList.add('winning-field');
 			return fieldA.innerHTML;
 		}
 	}
@@ -66,11 +70,13 @@ function checkForWinner() {
 }
 
 function displayWinner(winner) {
+let winnerField = document.getElementById('winner')
+
 	let message = '';
 	if (winner === xPath) {
 		message = 'Player 1 wins!';
 	} else {
 		message = 'Player 2 wins!';
 	}
-	alert(message);
+	winnerField.innerHTML = message;
 }

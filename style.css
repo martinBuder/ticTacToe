@@ -60,3 +60,12 @@ svg {
 .reloadBtn:hover {
 	background-color: rgb(152, 148, 148);
 }
+
+/* CSS für die gewinnenden Felder */
+div.winning-field {
+background-color: #9fb783;
+}
+
+#winner {
+	font-size: 3rem;
+}
